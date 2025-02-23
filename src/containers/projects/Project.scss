@@ -1,0 +1,88 @@
+.project-title {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center; /* Center-align title */
+}
+
+.startup-project-text img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main container for project cards */
+.repo-cards-div-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust card widths */
+  gap: 1rem; /* Equal gap between items */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Individual card styling */
+.repo-card {
+  width: 100%; /* Let the card take up full width within its grid item */
+  max-width: 350px; /* Set max-width for each card */
+  margin: 0 auto; /* Center the card horizontally */
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.repo-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.repo-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.repo-card a {
+  font-size: 14px;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.repo-card a:hover {
+  text-decoration: underline;
+}
+
+/* Card hover effect */
+.repo-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .repo-cards-div-main {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust card columns */
+  }
+
+  .repo-card {
+    max-width: 90%;  /* Ensure the cards don’t stretch too wide on mobile */
+    margin: 10px auto; /* Center the cards on small screens */
+  }
+
+  .project-title {
+    font-size: 30px; /* Smaller title for mobile */
+    text-align: center; /* Center-align title on smaller screens */
+  }
+}
+
+@media (max-width: 1380px) {
+  .project-title {
+    font-size: 40px; /* Adjust title size for medium screens */
+  }
+}

@@ -1,0 +1,147 @@
+@import "../../_globalColor";
+
+.main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 4rem;
+}
+
+.greet-main {
+  width: 100%; /* Full width */
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 2rem;
+  display: flex; /* Flex container */
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Center vertically */
+  gap: 20px; /* Gap between text and image */
+}
+
+.subTitle {
+  color: $subTitle !important;
+}
+
+.greeting-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.greeting-text-div {
+  flex: 0.5; /* Text content takes up 50% of width */
+  padding-left: 20px; /* Padding added to prevent content leaning to the left */
+  padding-right: 20px; /* Padding to create some spacing between image */
+}
+
+.greeting-text {
+  font-size: 42px; /* Reduced Title size */
+  line-height: 1.2;
+  color: $textColor !important;
+}
+
+.greeting-text-p {
+  font-size: 20px; /* Reduced Subtitle size */
+  line-height: 30px;
+  color: $subTitle !important; /* Lighter color for description */
+}
+
+.greeting-image-div {
+  width: 320px; /* Image container width */
+  height: 320px; /* Image container height */
+  border-radius: 50%; /* Circular shape */
+  overflow: hidden; /* Ensure image fits within circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid #fff; /* White border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Box-shadow effect */
+  max-width: 100%; /* Ensure it doesn't overflow */
+  margin-left: auto; /* Align the image div to the right */
+  margin-right: 10%; /* Prevent right side overflow */
+}
+
+.greeting-image-div > img {
+  width: 100%; /* Ensure image fills container */
+  height: 100%; /* Ensure image fills container */
+  object-fit: cover; /* Cover the entire circle */
+}
+
+.wave-emoji {
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .greeting-text {
+    font-size: 36px; /* Smaller for medium screens */
+  }
+  .greeting-text-p {
+    font-size: 18px; /* Smaller for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .greeting-main {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align items */
+    gap: 20px;
+  }
+  .greeting-text {
+    font-size: 30px;
+    text-align: center;
+  }
+  .greeting-text-p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .greeting-image-div {
+    width: 250px;
+    height: 250px;
+    margin-left: 0; /* Remove any left margin */
+    margin-right: 0; /* Remove any right margin */
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    width: auto;
+  }
+}
+
+/* Buttons */
+.button-greeting-div {
+  display: flex;
+  justify-content: space-between; /* Side by side buttons */
+  gap: 20px; /* Gap between buttons */
+  margin-top: 30px;
+}

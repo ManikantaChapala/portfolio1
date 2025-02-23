@@ -1,0 +1,58 @@
+@import "../../_globalColor";
+
+.achievement-heading {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.achievement-subtitle {
+  text-transform: uppercase;
+  margin: 0px;
+  margin-bottom: 50px;
+}
+
+.subTitle {
+  color: $subTitle;
+}
+
+/* Main container for cards */
+.achievement-cards-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Center the cards */
+  gap: 1.5rem;  /* Space between the cards */
+  padding: 0 20px;
+  box-sizing: border-box;
+  max-width: 100%; /* Make sure the parent container doesn't extend beyond screen */
+}
+
+/* Individual card */
+.certificate-card {
+  width: 100%;  /* Let the card take up the full width of the container */
+  max-width: 350px;  /* Max width of each card */
+  margin: 0 auto; /* Center the card horizontally */
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  /* Ensure text inside the card doesn't stretch the card out */
+  box-sizing: border-box;
+}
+
+/* Card hover effect */
+.certificate-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .certificate-card {
+    width: 100%;  /* Ensure it takes up the full width on mobile */
+    max-width: 90%;  /* Limit width to 90% of the screen size */
+    margin: 10px auto; /* Center on small screens with spacing */
+  }
+}
