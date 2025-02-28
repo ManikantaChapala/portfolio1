@@ -234,7 +234,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visit Website",
-          url: "power-x-fitness.vercel.app"
+          url: "hhtps://power-x-fitness.vercel.app"
         }
         //  you can add extra buttons here.
       ]
